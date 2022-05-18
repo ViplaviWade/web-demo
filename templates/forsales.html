@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Inspire GTN Application</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/forecastlist.css">
+    <link rel="stylesheet" href="static/css/appclosehome.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+</head>
+
+<body class="mat-typography">
+
+
+    <div class="toolbar" role="banner">
+
+        <div style="display: flex;justify-content: center;">
+            <!--<a><img class="img1" alt="Angular Logo" src="static/img/bgcolor.png" /></a>-->
+        </div>
+
+        <img alt="Angular Logo" src="static/img/inspire.png"
+            style="cursor: pointer;margin-left: 3px;" />
+
+
+        <span class="client-name-style">
+            <select name="cars" class="customername">
+                <option value="volvo">L100</option>
+                <option value="saab">L200</option>
+                <option value="mercedes">L300</option>
+                <option value="audi">L400</option>
+            </select>
+        </span>
+        <span class="client-name-dropdown-style">
+
+        </span>
+
+        <span id='header_container'>
+            <span class='stage header_navigation_txt header-left-round'>
+                <span class='stage-inner'></span>
+                <span class='stage-title'>
+                    <a href="index.html" style="font-size: 12px;">Home</a>
+                </span>
+            </span>
+            <span class='stage header_navigation_txt'>
+                <span style="font-size: 12px;">DataMode</span>
+            </span>
+            <span class='stage header_navigation_txt'>
+                <a href="forsales.html" style="font-size: 12px;">Forsales</a>
+            </span>
+            <span class='stage header_navigation_txt'>
+                <span style="font-size: 12px;">Close</span>
+            </span>
+            <span class='stage header_navigation_txt header-right-round'>
+                <span style="font-size: 12px;">Reports</span>
+            </span>
+        </span>
+        <!-- Header Navigation Section end -->
+
+        <!-- Alert Button -->
+        <!-- <button  *ngIf="isLoggedIn" type="button" class="btn btn-secondary btn-lg" style="margin-right: 10px;margin-bottom:5px">
+      <i class="fa fa-bell"></i>
+    </button> -->
+
+        <!-- APP screens navigation as per the existing APP -->
+        <button title="Switch to Classic View" style="margin-right: 10px;margin-bottom:5px;height:35px" type="button"
+            class="btn btn-secondary btn-md">
+            <i class="fa fa-exchange" aria-hidden="true" style="display: flex;"></i>
+        </button>
+
+        <!-- User Info Button -->
+        <button mat-button style="margin-right: 10px;margin-bottom:5px;height:35px" type="button"
+            class="btn btn-secondary btn-md">
+            <i class="fa fa-user" aria-hidden="true" style="display: flex;"></i>
+        </button>
+
+
+    </div>
+
+    <div style="margin: 10px; position: absolute; top: 65px;">
+        <div class="main">
+            <p style="font-size: 12px;">Forecast List</p>
+        </div>
+
+        <div>
+            <div class="row action-panel filter-panel-padding">
+
+                <!-- Organization DD start -->
+                <div>
+                    <mat-card class="form-inline" style="padding-bottom: 0px;padding-top: 10px;">
+                        <div class="row row-dropdown">
+
+                            <!-- Organization DD start -->
+
+                            <div class="filter-panel-alignment" style="padding: 10px; font-size: 15px;">
+                                <div class="filter-pannel-dropdown">
+                                    <mat-label>
+                                        <span>Organization</span>
+                                    </mat-label>
+                                </div>
+                                <div>
+                                    <select name="cars" class="customername">
+                                        <option value="volvo">L1</option>
+                                        <option value="saab">L2</option>
+                                        <option value="mercedes">L3</option>
+                                        <option value="audi">L4</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Organization DD end -->
+
+                            <!-- Start Month DD start -->
+
+                            <div>
+                                <div class="filter-pannel-dropdown" style="padding: 8px; font-size: 15px;">
+                                    <mat-label>
+                                        <span>Forecast Start Month</span>
+                                    </mat-label>
+                                </div>
+                                <div>
+                                    <select name="cars" class="customername">
+                                        <option value="volvo">L1</option>
+                                        <option value="saab">L2</option>
+                                        <option value="mercedes">L3</option>
+                                        <option value="audi">L4</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Start Month DD end -->
+
+                        </div>
+
+                    </mat-card>
+
+                </div>
+
+                <div class="forecast-navigation-dropdown-button" style="margin-left: 700px;">
+                    <div>
+                        <button type="button"
+                            class="btn btn-primary btn-primary-color btn-primary-background-color btn-md button-margin"><i
+                                class="fa fa-plus"></i> </button>
+
+                        <button type="button"
+                            class="btn btn-primary btn-primary-color btn-primary-background-color btn-md button-margin"><i
+                                class="fa fa-download"></i></button>
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <div>
+                            <button id="nav_button_label" type="button"
+                                class="btn btn-primary btn-primary-navigation btn-md navigation-dropdown-width"><span
+                                    class="btn-split-action">View actual earned</span></button>
+                            <div class="btn-group" ngbDropdown role="group"
+                                aria-label="Navigation button group with nested dropdown">
+                                <button
+                                    class="btn btn-primary btn-primary-navigation button-margin btn-md dropdown-toggle-split">
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <button type="button"
+                            class="btn btn-primary btn-primary-color btn-primary-background-color btn-md button-margin"
+                            matTooltip="Refresh Grid" (click)="refreshGrid()"><i class="fa fa-refresh"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div style="margin-top: 10px; border: 1px solid #cdd5dc !important; box-shadow: none !important;">
+                <table class="db-tree-view table-class table-bordered" >
+                    <thead>
+                        <tr class="text-val">
+                            <th width="10%">
+                                <div>Alert</div>
+                            </th>
+                            <th width="20%" class="ng-star-inserted">
+                                <div>Sales Info</div>
+                            </th>
+                            <th width="20%" class="ng-star-inserted">
+                                <div>Assumption Pkt</div>
+                            </th>
+                            <th width="15%" class="ng-star-inserted">
+                                <div>Status</div>
+                            </th>
+                            <th width="15%" class="ng-star-inserted">
+                                <div>Default</div>
+                            </th>
+                            <th width="15%" class="ng-star-inserted">
+                                <div>Last revised sale</div>
+                            </th>
+                            <th width="15%" class="ng-star-inserted">
+                                <div>Last updated By</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody align="center">
+                        <tr>
+                            <td></td>
+                            <td>Test</td>
+                            <td>Forecast 2021-M04</th>
+                            <td>Pending Calculation</td>
+                            <td>No</th>
+                            <td>2022-02-24 15:26:23 PM</td>
+                            <td>viplaviwade21@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Case UT 2</td>
+                            <td>Forsale 2021-CC2</th>
+                            <td>Calculating</td>
+                            <td>No</th>
+                            <td>2022-02-24 07:27:51 AM</td>
+                            <td>viplaviwade21@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Case UT 3</td>
+                            <td>Forsale 2021-M04</th>
+                            <td>Calculated</td>
+                            <td>No</th>
+                            <td>2022-02-24 09:11:27 AM</td>
+                            <td>viplaviwade21@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Case UT 1</td>
+                            <td>Forsale 2021-M04</th>
+                            <td>Calculated</td>
+                            <td>No</th>
+                            <td>2022-02-24 03:27:51 PM</td>
+                            <td>viplaviwade21@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

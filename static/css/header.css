@@ -1,0 +1,240 @@
+.toolbar {
+    position: fixed;
+    width: 100vw;
+    z-index: 2000;
+    height: 60px;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    justify-content: space-between;
+    background-color: #07314d;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+}
+a{
+    text-decoration: none;
+    color: white;
+    size: 20px;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+    size: 20px;
+}
+
+.toolbar .img1 {
+    margin: 0 16px;
+    width: 100px;
+    height: 44px;
+}
+
+.toolbar img {
+    margin: 0 16px;
+    width: 183px;
+    height: 44px;
+}
+
+.mat-menu-panel.my-class {
+    max-width: none !important;
+}
+
+.bs-popover-auto[x-placement^=right],
+.bs-popover-right {
+    margin-left: -3.5rem;
+}
+
+.client-name-style {
+    margin-left: 5px;
+    margin-right: auto;
+    color: white;
+    white-space: nowrap;
+    font-size: 24px;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    width: 29%;
+}
+
+.client-name-dropdown-style {
+    margin-left: 5px;
+    margin-right: auto;
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    align-items: center;
+    margin-bottom: 4px;
+    width: 29%;
+}
+
+.client-name-dropdown-style .ng-select .ng-select-container {
+    min-height: 35px !important;
+}
+
+.client-name-dropdown-style .ng-select.ng-select-single .ng-select-container {
+    height: 35px !important;
+}
+
+
+.mat-list-item-content {
+    height: 35px;
+}
+
+.mat-list-base .mat-list-item .mat-list-item-content {
+    padding: 0px !important
+}
+
+.nav_drawer {
+    width: 97%;
+    height: 100%;
+}
+
+.mat_nav_list_style {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    color: black;
+}
+
+.mat_icon_style {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.popover-body {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.dropdown-toggle::after {
+    content: initial
+}
+
+#header {
+    padding: 8px 10px 8px 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-color: #07314d;
+    z-index: 1001;
+    height: 40px;
+}
+
+#header_container {
+    display: flex;
+    align-items: center;
+    float: left;
+    font-size: 11px;
+    margin-right: 25px;
+    margin-bottom: 5px;
+}
+
+.badge {
+    width: 24px;
+}
+
+.stage {
+    padding: .7em 1em .7em 2em;
+    float: left;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    background-color: #939598;
+    cursor: pointer;
+    width: 90px;
+}
+
+.active-stage {
+    /* background-color: #6ec1e3 !important; */
+    background-color: #0063BE !important;
+}
+
+.stage:hover {
+    background-color: #6c757d;
+}
+
+.stage:last-of-type::after,
+.stage:last-of-type::before {
+    border-left: 0em solid !important;
+}
+
+.stage::after,
+.stage::before {
+    content: "";
+    position: absolute;
+    margin-top: -0.7em;
+    border-top: 1.7em solid transparent;
+    border-bottom: 1.55em solid transparent;
+    border-left: 1em solid;
+    right: -1em;
+}
+
+.stage::after {
+    z-index: 2;
+    border-left-color: #939598;
+    /* border-left-color: #07314d; */
+}
+
+.stage::before {
+    border-left-color: #004a63;
+    right: -1.05em;
+    z-index: 1;
+}
+
+.active-stage::after {
+    /* border-left-color: #6ec1e3 !important; */
+    border-left-color: #0063BE !important;
+}
+
+.active-stage::before {
+    border-left-color: #004a63 !important;
+}
+
+.stage:hover::after {
+    border-left-color: #6c757d;
+}
+
+.active-stage:hover::after {
+    /* border-left-color: #6ec1e3 !important; */
+    border-left-color: #0063BE !important;
+}
+
+.header_navigation_txt {
+    display: flex;
+    justify-content: center;
+}
+
+.header-outlet-style {
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-top: 6px !important;
+    display: block;
+    padding-top: 0px !important;
+    border: 1px solid #ccc;
+}
+
+
+btn-secondary {
+    color: #fff;
+    background-color: #6C757D;
+    border-color: #6C757D;
+    border-top-color: rgb(108, 117, 125);
+    border-right-color: rgb(108, 117, 125);
+    border-bottom-color: rgb(108, 117, 125);
+    border-left-color: rgb(108, 117, 125);
+}
+
+.header-left-round {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.header-right-round {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.customername{
+    width: 200px;
+    height: 35px;
+}

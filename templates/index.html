@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Inspire Application</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/homecomponent.css">
+    <link rel="stylesheet" href="static/css/appclosehome.css">
+    <link rel="stylesheet" href="static/css/forecastlist.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+</head>
+
+<body class="mat-typography">
+    <div class="toolbar" role="banner">
+        <div style="display: flex;justify-content: center;">
+            <a><i class="fa fa-th fa-lg" aria-hidden="true"></i></a>
+        </div>
+        <img alt="Angular Logo"
+            src="static/img/inspire.png"
+            style="cursor: pointer;margin-left: 3px;" />
+        <span class="client-name-style">
+            <select name="cars" class="customername">
+                <option value="volvo">L1</option>
+                <option value="saab">L2</option>
+                <option value="mercedes">L3</option>
+                <option value="audi">L4</option>
+            </select>
+        </span>
+        <span class="client-name-dropdown-style">
+        </span>
+        <span id='header_container'>
+            <span class='stage header_navigation_txt header-left-round'>
+                <span class='stage-inner'></span>
+                <span class='stage-title'>
+                    <span>Home</span>
+                </span>
+            </span>
+            <span class='stage header_navigation_txt'>
+                <span style="font-size: 12px;">DataMode</span>
+            </span>
+            <span class='stage header_navigation_txt'>
+                <a href="/forsales" style="font-size: 12px;">Forsales</a>
+            </span>
+            <span class='stage header_navigation_txt'>
+                <span style="font-size: 12px;">Close</span>
+            </span>
+            <span class='stage header_navigation_txt header-right-round'>
+                <span style="font-size: 12px;">Reports</span>
+            </span>
+        </span>
+        <!-- Header Navigation Section end -->
+        <!-- Alert Button -->
+        <!-- <button  *ngIf="isLoggedIn" type="button" class="btn btn-secondary btn-lg" style="margin-right: 10px;margin-bottom:5px">
+      <i class="fa fa-bell"></i>
+    </button> -->
+        <!-- APP screens navigation as per the existing APP -->
+        <button title="Switch to Classic View" style="margin-right: 10px;margin-bottom:5px;height:35px" type="button"
+            class="btn btn-secondary btn-md">
+            <i class="fa fa-exchange" aria-hidden="true" style="display: flex;"></i>
+        </button>
+        <!-- User Info Button -->
+        <button mat-button style="margin-right: 10px;margin-bottom:5px;height:35px" type="button"
+            class="btn btn-secondary btn-md">
+            <i class="fa fa-user" aria-hidden="true" style="display: flex;"></i>
+        </button>
+
+
+    </div>
+
+    <div class="main" style="margin: 10px; position: absolute; top: 50px;">
+        <p style="font-size: 12px;">Home Close</p>
+
+        <!-- <div class="btn-group" >
+            <button type="button" class="btn btn-primary sm">Close</button>
+            <button type="button" class="btn btn-secondary sm">Forecast</button>
+        </div> -->
+
+
+        <div style="clear: both"></div>
+        <div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary" role="tab"
+                        style="text-decoration: none !important;font-weight: bold; background-color: #0063BE; color: white;">
+                        Close</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" role="tab" style="text-decoration: none !important;font-weight: bold;"> Forsales
+                    </a>
+                </li>
+            </ul>
+            <div id="tabs-container" class="pt-1">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+        <!-- App close home -->
+
+        <div style="height: 100%;">
+            <div>
+                <div class="row action-panel filter-panel-padding">
+                    <div class="" style="width: 87%;">
+                        <mat-card class="form-inline" style="padding-bottom: 0px;padding-top: 10px;">
+                            <div class="row" style="margin-bottom: 10px;padding-left: 15px; font-size: 12px;">
+
+                                <!-- Organization dropdown start -->
+                                <div class="filter-panel-alignment" style="justify-content: center; padding-left: 10px;">
+                                    <div style="font-weight: bold;padding-bottom: 5px;  ">
+                                        <mat-label>Org </mat-label>
+                                    </div>
+                                    <div>
+                                        <select name="cars" class="customername">
+                                            <option value="volvo">L1</option>
+                                            <option value="saab">L2</option>
+                                            <option value="mercedes">L3</option>
+                                            <option value="audi">L4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Organization dropdown end -->
+
+                                <!-- Close Month dropdown start -->
+                                <div class="filter-panel-alignment">
+                                    <div style="margin-left: 5px;font-weight: bold;padding-bottom: 5px;">
+                                        <mat-label>
+                                            <span>Close M</span>
+                                        </mat-label>
+                                    </div>
+                                    <div>
+                                        <select name="cars" class="customername">
+                                            <option value="volvo">L100</option>
+                                            <option value="saab">L200</option>
+                                            <option value="mercedes">L300</option>
+                                            <option value="audi">L400</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Close Month dropdown end -->
+
+                                <!-- Close Name dropdown start -->
+                                <div class="filter-panel-alignment">
+                                    <div style="font-weight: bold;;padding-bottom: 5px;">
+                                        <mat-label>
+                                            <span>Close N</span>
+                                        </mat-label>
+                                    </div>
+                                    <div>
+                                        <select name="cars" class="customername">
+                                            <option value="volvo">L100</option>
+                                            <option value="saab">L200</option>
+                                            <option value="mercedes">L300</option>
+                                            <option value="audi">L400</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Close Name dropdown end -->
+
+                                <!-- Item Level dropdown start -->
+                                <div class="filter-panel-alignment">
+                                    <div style="font-weight: bold;padding-bottom: 5px;">
+                                        <mat-label>
+                                            <span>Item L</span>
+                                        </mat-label>
+                                    </div>
+                                    <div>
+                                        <select name="cars" class="customername">
+                                            <option value="volvo">L1</option>
+                                            <option value="saab">L2</option>
+                                            <option value="mercedes">L3</option>
+                                            <option value="audi">L4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Item Level dropdown end -->
+
+                                <!-- Item Data dropdown start -->
+                                <div class="filter-panel-alignment">
+                                    <div style="font-weight: bold;;padding-bottom: 5px;">
+                                        <mat-label>
+                                            <span>Item F</span>
+                                        </mat-label>
+                                    </div>
+                                    <div style="width: 16vw;">
+                                        <select name="cars" class="customername">
+                                            <option value="volvo">L100</option>
+                                            <option value="saab">L200</option>
+                                            <option value="mercedes">L300</option>
+                                            <option value="audi">L400</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Item Data dropdown end -->
+
+                                <!-- Show default/approved toggle start -->
+                                <div class="filter-panel-alignment">
+                                    <div style="padding-bottom: 5px;font-weight: bold;">
+                                        <mat-label>Show Default Only</mat-label>
+                                    </div>
+                                    <div>
+                                        <span><img src="static/img/Toggle_on.png" width="50px" height="20px"
+                                                style="cursor: pointer;" alt=""></span>
+                                    </div>
+                                </div>
+                                <!-- Show default/approved toggle end -->
+
+                            </div>
+
+                        </mat-card>
+
+                    </div>
+                    <div class="navigation-dropdown-button">
+                        <div class="row form-inline pull-right">
+                            <div>
+                                <button id="nav_button_label" style="width:10vw" type="button"
+                                    class="btn btn-primary btn-primary-navigation btn-md"><span
+                                        class="btn-split-action">Load Data</span></button>
+                                <div class="btn-group" ngbDropdown role="group"
+                                    aria-label="Navigation button group with nested dropdown">
+                                    <button
+                                        class="btn btn-primary btn-primary-navigation btn-md dropdown-toggle-split"><i
+                                            class="fa fa-caret-down"></i></button>
+                                    <div class="dropdown-menu">
+                                        <button>Sushil</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <app-tree-grid [gridConfigs]="closeGridConfigs" [gridDetails]="closeTreeGridDetails">
+                    </app-tree-grid>
+                </div>
+
+                <div style="margin-top: 10px; border: 1px solid #cdd5dc !important; box-shadow: none !important;">
+                    <table class="db-tree-view table-class">
+                        <thead>
+                            <tr class="text-val ng-star-inserted">
+                                <th width="30%" class="ng-star-inserted">
+                                    <div>Wide Channel Name</div>
+                                </th>
+                                <th width="10%" class="ng-star-inserted">
+                                    <div>Close</div>
+                                </th>
+                                <th width="10%" class="ng-star-inserted">
+                                    <div>True Up</div>
+                                </th>
+                                <th width="10%" class="ng-star-inserted">
+                                    <div>Pipeline</div>
+                                </th>
+                                <th width="10%" class="ng-star-inserted">
+                                    <div>Balance Sheet</div>
+                                </th>
+                                <th width="10%" class="ng-star-inserted">
+                                    <div>Sub Total</div>
+                                </th>
+                                <th width="10%" class="ng-star-inserted">
+                                    <div>SOS Accrual</div>
+                                </th>
+                                <th width="10%" class="ng-star-inserted">
+                                    <div>Total</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="ng-star-inserted">
+                                <td style="text-align: center;" colspan="9">No Data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row action-panel" style="margin-top: 10px;">
+                    <div baseChart class="col-lg-6 col-md-6 chartjs-container accrual_dollar_trend">
+                        <img src="static/img/appcomponentimg.png" width="1500" height="80%" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
